@@ -1,6 +1,4 @@
 # (©)Codexbotz
-# Recode by @mrismanaziz
-# t.me/SharingUserbot & t.me/Lunatic0de
 
 import asyncio
 from datetime import datetime
@@ -98,6 +96,7 @@ async def start_command(client: Client, message: Message):
                     chat_id=message.from_user.id,
                     caption=caption,
                     parse_mode="html",
+                    protect_content=True,
                     reply_markup=reply_markup,
                 )
                 await asyncio.sleep(0.5)
@@ -107,19 +106,20 @@ async def start_command(client: Client, message: Message):
                     chat_id=message.from_user.id,
                     caption=caption,
                     parse_mode="html",
+                    protect_content=True,
                     reply_markup=reply_markup,
                 )
             except BaseException:
                 pass
     else:
         buttons = [
-            [InlineKeyboardButton("• ᴛᴇɴᴛᴀɴɢ sᴀʏᴀ •", callback_data="about")],
+            [InlineKeyboardButton("• 𝕋𝕖𝕟𝕥𝕒𝕟𝕘 𝕊𝕒𝕪𝕒 •", callback_data="about")],
             [
-                InlineKeyboardButton("𝗖𝗛𝗔𝗡𝗡𝗘𝗟", url=client.invitelink),
-                InlineKeyboardButton("𝗚𝗥𝗢𝗨𝗣", url=client.invitelink2),
+                InlineKeyboardButton("Cԋαɳɳҽʅ Lσƙαʅ", url=client.invitelink),
+                InlineKeyboardButton("Cԋαɳɳҽʅ Aʂιɳɠ", url=client.invitelink2),
             ],
             [
-                InlineKeyboardButton("• ᴛᴜᴛᴜᴘ •", callback_data="close"),
+                InlineKeyboardButton("• 𝕋𝕦𝕥𝕦𝕡 •", callback_data="close"),
             ],
         ]
         await message.reply_text(
@@ -144,8 +144,8 @@ async def start_command(client: Client, message: Message):
 async def not_joined(client: Client, message: Message):
     buttons = [
         [
-            InlineKeyboardButton("𝗖𝗛𝗔𝗡𝗡𝗘𝗟", url=client.invitelink),
-            InlineKeyboardButton("𝗚𝗥𝗢𝗨𝗣", url=client.invitelink2),
+            InlineKeyboardButton("Cԋαɳɳҽʅ Lσƙαʅ", url=client.invitelink),
+            InlineKeyboardButton("Cԋαɳɳҽʅ Aʂιɳɠ", url=client.invitelink2),
         ],
     ]
     try:
@@ -202,11 +202,11 @@ async def send_text(client: Bot, message: Message):
         for row in query:
             chat_id = int(row[0])
             try:
-                await broadcast_msg.copy(chat_id)
+                await broadcast_msg.copy(chat_id,protect_content=True)
                 successful += 1
             except FloodWait as e:
                 await asyncio.sleep(e.x)
-                await broadcast_msg.copy(chat_id)
+                await broadcast_msg.copy(chat_id,protect_content=True)
                 successful += 1
             except UserIsBlocked:
                 blocked += 1
