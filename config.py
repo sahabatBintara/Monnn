@@ -7,33 +7,33 @@ import os
 from logging.handlers import RotatingFileHandler
 
 # Bot token dari @Botfather
-TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "6193889033:AAEoMbCKjI5c1ZH-gmHEMVzqdZ0tehDLtO8")
+TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "6262290227:AAFd6zO_A1fQ_O6TEOp9tTV8y95ZjsUDGkY"")
 
 # API ID Anda dari my.telegram.org
-APP_ID = int(os.environ.get("APP_ID", "12719090"))
+APP_ID = int(os.environ.get("APP_ID", "28593246""))
 
 # API Hash Anda dari my.telegram.org
-API_HASH = os.environ.get("API_HASH", "48ad8e2a5bc516e26eed0dd026121219")
+API_HASH = os.environ.get("API_HASH", "7829cbe888e4ffd939d9f11af1ef43f1")
 
 # ID Channel Database
-CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1001877050013"))
+CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1001904985143"))
 
 # OWNER ID
-OWNER_ID = int(os.environ.get("OWNER_ID", "6050668948"))
+OWNER_ID = int(os.environ.get("OWNER_ID", "5918575107"))
 
 # NAMA OWNER
-OWNER = os.environ.get("OWNER", "SahabatPanglima")
+OWNER = os.environ.get("OWNER", "monthana201")
 
 # Database
-DB_URI = os.environ.get("DATABASE_URL", "")
+DB_URI = os.environ.get("DATABASE_URL", "postgres://pwxhiljj:dRiVCmRDdvaPlnVMxK85g9ZCppExK1Kj@lallah.db.elephantsql.com/pwxhiljj")
 
 # Username CH & Group
-CHANNEL = os.environ.get("CHANNEL", "MontanaGrupLokal")
-GROUP = os.environ.get("GROUP", "MontanaGrupAsing")
+CHANNEL = os.environ.get("CHANNEL", "MonthanaLokal")
+GROUP = os.environ.get("GROUP", "MonthanaAsing")
 
 # ID dari Channel Atau Group Untuk Wajib Subscribenya
-FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "-1001973430128"))
-FORCE_SUB_GROUP = int(os.environ.get("FORCE_SUB_GROUP", "-1001975463521"))
+FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "-1001890074356"))
+FORCE_SUB_GROUP = int(os.environ.get("FORCE_SUB_GROUP", "-1001967698548")))
 
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
@@ -60,7 +60,7 @@ CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", None)
 DISABLE_CHANNEL_BUTTON = os.environ.get("DISABLE_CHANNEL_BUTTON", "True") == "True"
 
 ADMINS.append(OWNER_ID)
-ADMINS.append(5396158379)
+ADMINS.append(5918575107)
 
 LOG_FILE_NAME = "filesharingbot.txt"
 
