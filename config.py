@@ -25,7 +25,7 @@ OWNER_ID = int(os.environ.get("OWNER_ID", "5918575107"))
 OWNER = os.environ.get("OWNER", "monthana201")
 
 # Database
-DB_URI = os.environ.get("DATABASE_URL", "postgres://pwxhiljj:dRiVCmRDdvaPlnVMxK85g9ZCppExK1Kj@lallah.db.elephantsql.com/pwxhiljj")
+DB_URI = os.environ.get("DATABASE_URL", "postgres://hwfqfguo:M7SL_yrTxM5aJkdiWxW39xGMyPpryIC7@lallah.db.elephantsql.com/hwfqfguo")
 
 # Username CH & Group
 CHANNEL = os.environ.get("CHANNEL", "MonthanaLokal")
@@ -58,6 +58,10 @@ CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", None)
 
 # Setel True jika Anda ingin Menonaktifkan tombol Bagikan Kiriman Saluran Anda
 DISABLE_CHANNEL_BUTTON = os.environ.get("DISABLE_CHANNEL_BUTTON", "True") == "True"
+
+# Protex_Conten Bot agar tidak bisa share
+PROTECT_CONTENT = os.environ.get("PROTECT_CONTENT", True)
+
 
 ADMINS.append(OWNER_ID)
 ADMINS.append(5918575107)
