@@ -11,7 +11,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
     data = query.data
     if data == "about":
         await query.message.edit_text(
-            text=f"<b>Tentang Bot ini:\n\n • Owner: @{OWNER}\n • Channel: @{CHANNEL}\n • Group: @{GROUP}\n • Source Code: Mbah Google\n",
+            text=f"<b>Tentang Bot ini:\n\n • Owner: @{OWNER}\n • Channel lokal: @{CHANNEL}\n • Channel asing: @{GROUP}\n • Source Code: Mbah Google\n",
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [[InlineKeyboardButton("• 𝕋𝕦𝕥𝕦𝕡 •", callback_data="close")]]
